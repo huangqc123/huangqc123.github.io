@@ -19,8 +19,12 @@
     <meta name="keywords" content="123456">
 
 
-    <meta name="description" content="第一章：我的日志widgqwkgdjwgefiwge
-">
+    <meta name="description" content="第一章：BFCBFC:块级格式化上下文
+块级元素如何开启BFC:
+1.根元素(body)
+2.float属性不为none
+3.position为absolute或fixed
+4.display为...">
 
 
 
@@ -32,7 +36,7 @@
     <!--Title-->
 
 
-<title>我的第一篇博客 | Hexo</title>
+<title>BFC | Hexo</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -137,9 +141,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="我的第一篇博客">
+        <h1 id="BFC">
             
-	            我的第一篇博客
+	            BFC
             
         </h1>
         <div class="post-meta">
@@ -173,13 +177,34 @@
             
             
             <p class="fa fa-exclamation-triangle warning">
-                本文于<strong>365</strong>天之前发表，文中内容可能已经过时。
+                本文于<strong>376</strong>天之前发表，文中内容可能已经过时。
             </p>
         
     </div>
     
     <div class="post-body post-content">
-        <h1 id="第一章：我的日志"><a href="#第一章：我的日志" class="headerlink" title="第一章：我的日志"></a>第一章：我的日志</h1><p>widgqwkgdjwgefiwge</p>
+        <h1 id="第一章：BFC"><a href="#第一章：BFC" class="headerlink" title="第一章：BFC"></a>第一章：BFC</h1><p><strong>BFC:块级格式化上下文</strong></p>
+<p>块级元素如何开启BFC:</p>
+<p>1.根元素(body)</p>
+<p>2.float属性不为none</p>
+<p>3.position为absolute或fixed</p>
+<p>4.display为inline-block, table-cell, table-caption, flex, inline-flex</p>
+<p>5.overflow不为visible。</p>
+<p>一般情况下开启BFC都用overflow:hidden来开启BFC</p>
+<p>BFC布局特性：</p>
+<p>1.在BFC中，盒子从顶端开始垂直地一个接一个地排列.</p>
+<p>2.盒子垂直方向的距离由margin决定。属于同一个BFC的两个相邻盒子的margin会发生重叠</p>
+<p><a href="https://i.loli.net/2019/04/14/5cb3270324f07.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/04/14/5cb3270324f07.png" alt="1.png"></a></p>
+<p><a href="https://i.loli.net/2019/04/14/5cb3270332665.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/04/14/5cb3270332665.png" alt="2.png"></a></p>
+<p>3.在BFC中，每一个盒子的左外边缘（margin-left）会触碰到容器的左边缘(border-left)（对于从右到左的格式来说，则触碰到右边缘）。</p>
+<p>4.BFC的区域不会与浮动盒子产生交集，而是紧贴浮动边缘。</p>
+<p><a href="https://i.loli.net/2019/04/14/5cb327031cee8.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/04/14/5cb327031cee8.png" alt="普通浮动.png"></a></p>
+<p><a href="https://i.loli.net/2019/04/14/5cb327033205b.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/04/14/5cb327033205b.png" alt="box2开启BFC.png"></a></p>
+<p>5.计算BFC的高度时，自然也会检测浮动或者定位的盒子高度。</p>
+<p>6.BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面元素，反之亦然。</p>
+<p>绝对定位与BFC</p>
+<p>这里的box3是绝对定位的，我们可以看到，虽然浮动与绝对定位都是脱标的，但是绝对定位并不会影响到BFC</p>
+<p><a href="https://i.loli.net/2019/04/14/5cb32702bdb19.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/04/14/5cb32702bdb19.png" alt="浮动与绝对定位对BFC的关系.png"></a></p>
 
     </div>
     
@@ -243,7 +268,7 @@
     <div class="widget">
         <h3 class="title">Table of Contents</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一章：我的日志"><span class="toc-text">第一章：我的日志</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一章：BFC"><span class="toc-text">第一章：BFC</span></a></li></ol>
         
     </div>
 </aside>
