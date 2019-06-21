@@ -24,9 +24,8 @@ MVVM：
 View ： 视图层
 
 ViewModel ： 视图和模型之间的一个中转站
-
- Model ：模型层
-MVVM 模式采用双向绑定（data-b...">
+​     Model ：模型层
+MVVM 模式采用双向绑定（da...">
 
 
 
@@ -184,9 +183,8 @@ MVVM 模式采用双向绑定（data-b...">
 <pre><code>View ： 视图层
 
 ViewModel ： 视图和模型之间的一个中转站
-
- Model ：模型层
-</code></pre><p>MVVM 模式采用双向绑定（data-binding）：View的变动，自动反映在 ViewModel，反之亦然，而View 和 Model 之间的同步工作完全是自动的，无需人为干涉，因此开发者只需关注业务逻辑，不需要手动操作DOM, 不需要关注数据状态的同步问题，复杂的数据状态维护完全由 MVVM 来统一管理。angular 和vue都采用这种模式。</p>
+</code></pre><p>​     Model ：模型层</p>
+<p>MVVM 模式采用双向绑定（data-binding）：View的变动，自动反映在 ViewModel，反之亦然，而View 和 Model 之间的同步工作完全是自动的，无需人为干涉，因此开发者只需关注业务逻辑，不需要手动操作DOM, 不需要关注数据状态的同步问题，复杂的数据状态维护完全由 MVVM 来统一管理。angular 和vue都采用这种模式。</p>
 <p><img src="https://i.loli.net/2019/06/21/5d0c2afe7f3b138116.bmp" alt></p>
 <p><img src="https://i.loli.net/2019/06/21/5d0c2b011995c85727.bmp" alt></p>
 <h2 id="１-vue基本使用"><a href="#１-vue基本使用" class="headerlink" title="１. vue基本使用"></a>１. <strong>vue基本使用</strong></h2><p>１. 在html中引入vue.js文件  </p>
@@ -204,13 +202,11 @@ ViewModel ： 视图和模型之间的一个中转站
 <pre><code>v-model : 绑定ViewMoldel中的数据到当前的input标签中
 
 v-on:input : 绑定事件
-
-v-on:input=&quot;showInfo&quot;  当文本框内容发生改变的时候，会触发showInfo的事件
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; v-model=&quot;message&quot; v-on:input=&quot;showInfo&quot;&gt;</span><br><span class="line"></span><br><span class="line">  &lt;input type=&quot;button&quot; value=&quot;修改数据&quot; v-on:click=&quot;change&quot;&gt;</span><br></pre></td></tr></table></figure>
+</code></pre><p>​             v-on:input=”showInfo”  当文本框内容发生改变的时候，会触发showInfo的事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; v-model=&quot;message&quot; v-on:input=&quot;showInfo&quot;&gt;</span><br><span class="line"></span><br><span class="line">  &lt;input type=&quot;button&quot; value=&quot;修改数据&quot; v-on:click=&quot;change&quot;&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="插值表达式"><a href="#插值表达式" class="headerlink" title="插值表达式"></a><strong>插值表达式</strong></h2><pre><code>1.必须是一句话(必须是表达式)
-
-2.必须有返回值
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;number+1&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;ok?&quot;YES&quot;:&quot;NO&quot;&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;message.split(&quot;&quot;).reverse().join(&quot;-&quot;)&#125;&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><p>​       2.必须有返回值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;number+1&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;ok?&quot;YES&quot;:&quot;NO&quot;&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;message.split(&quot;&quot;).reverse().join(&quot;-&quot;)&#125;&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a><strong>常用指令</strong></h2><p>v-cloak : 用来解决插值表达式的闪烁问题</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br></pre></td></tr></table></figure>
 <pre><code>    /*解决插值表达式的闪烁问题*/
@@ -262,8 +258,8 @@ v-on:input=&quot;showInfo&quot;  当文本框内容发生改变的时候，会�
 <!-- 使用 .once 只触发一次事件处理函数 -->
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span href=&quot;http://www.baidu.com&quot; @click.once=&quot;spanClick&quot;&gt;只能触发一次&lt;/span&gt;</span><br></pre></td></tr></table></figure>
 <!-- 演示： .stop 和 .self 的区别 -->
-<pre><code>&lt;!--.stop阻止所有的冒泡--&gt;
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">        &lt;div class=&quot;outer&quot; @click=&quot;div2Handler&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>​        <!--.stop阻止所有的冒泡--></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">        &lt;div class=&quot;outer&quot; @click=&quot;div2Handler&quot;&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">            &lt;div class=&quot;inner&quot; @click=&quot;div1Handler&quot;&gt;		&lt;div class=&quot;inner&quot; @click=&quot;div1Handler&quot;&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;button&quot; value=&quot;stop&quot; @click.stop=&quot;btnHandler&quot;&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
