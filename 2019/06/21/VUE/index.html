@@ -1,0 +1,391 @@
+<!DOCTYPE HTML>
+<html lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Hexo">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="https://huangqc123/huangqc123.github.io">
+    <!--SEO-->
+
+    <meta name="keywords" content>
+
+
+    <meta name="description" content="VUEVue使用的是MVVM的设计思想
+MVVM：
+View ： 视图层
+
+ViewModel ： 视图和模型之间的一个中转站
+​     Model ：模型层
+MVVM 模式采用双向绑定（da...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/huangqc123.github.io/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/huangqc123.github.io/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/huangqc123.github.io/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="huangqc123">
+            <img src="/huangqc123.github.io/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/huangqc123.github.io/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="https://huangqc123/huangqc123.github.io">Hexo</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>Home</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id>
+            
+	            NO Title!
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2019/06/21</span>
+        </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="VUE"><a href="#VUE" class="headerlink" title="VUE"></a>VUE</h1><p>Vue使用的是MVVM的设计思想</p>
+<p>MVVM：</p>
+<pre><code>View ： 视图层
+
+ViewModel ： 视图和模型之间的一个中转站
+</code></pre><p>​     Model ：模型层</p>
+<p>MVVM 模式采用双向绑定（data-binding）：View的变动，自动反映在 ViewModel，反之亦然，而View 和 Model 之间的同步工作完全是自动的，无需人为干涉，因此开发者只需关注业务逻辑，不需要手动操作DOM, 不需要关注数据状态的同步问题，复杂的数据状态维护完全由 MVVM 来统一管理。angular 和vue都采用这种模式。</p>
+<p><img src="https://i.loli.net/2019/06/21/5d0c2afe7f3b138116.bmp" alt></p>
+<p><img src="https://i.loli.net/2019/06/21/5d0c2b011995c85727.bmp" alt></p>
+<h2 id="１-vue基本使用"><a href="#１-vue基本使用" class="headerlink" title="１. vue基本使用"></a>１. <strong>vue基本使用</strong></h2><p>１. 在html中引入vue.js文件  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;./vue-2.4.0.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>２. 在页面声明一个元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app2&quot;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; message &#125;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>３. 创建一个ViewModel实例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//创建一个ViewModel实例</span><br><span class="line"></span><br><span class="line">    var app = new Vue(&#123;</span><br><span class="line"></span><br><span class="line">        //表示我们new出来ViewModel实例和页面上的哪个区域关联</span><br><span class="line"></span><br><span class="line">        el: &apos;#app2&apos;,</span><br></pre></td></tr></table></figure>
+<pre><code>//Model
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">   data: &#123;</span><br><span class="line"></span><br><span class="line">        message: &apos;Hello Vue!&apos;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/06/21/5d0c2afd047b725310.bmp" alt></p>
+<h2 id="Vue的双向绑定"><a href="#Vue的双向绑定" class="headerlink" title="Vue的双向绑定"></a><strong>Vue的双向绑定</strong></h2><p> 双向绑定用的指令是v-model ，只有v-model才是双向绑定的</p>
+<pre><code>v-model : 绑定ViewMoldel中的数据到当前的input标签中
+
+v-on:input : 绑定事件
+</code></pre><p>​             v-on:input=”showInfo”  当文本框内容发生改变的时候，会触发showInfo的事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; v-model=&quot;message&quot; v-on:input=&quot;showInfo&quot;&gt;</span><br><span class="line"></span><br><span class="line">  &lt;input type=&quot;button&quot; value=&quot;修改数据&quot; v-on:click=&quot;change&quot;&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="插值表达式"><a href="#插值表达式" class="headerlink" title="插值表达式"></a><strong>插值表达式</strong></h2><pre><code>1.必须是一句话(必须是表达式)
+</code></pre><p>​       2.必须有返回值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;number+1&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;ok?&quot;YES&quot;:&quot;NO&quot;&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;message.split(&quot;&quot;).reverse().join(&quot;-&quot;)&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a><strong>常用指令</strong></h2><p>v-cloak : 用来解决插值表达式的闪烁问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>    /*解决插值表达式的闪烁问题*/
+
+    [v-cloak]{
+
+        display: none;
+
+    }
+
+&lt;/style&gt;
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-cloak&gt;你好 &#123;&#123; message &#125;&#125;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- v-text没有插值表达式的闪烁问题 </span><br><span class="line"></span><br><span class="line">             v-text是用来设置标签的内容,会替换掉标签的原来内容</span><br><span class="line"></span><br><span class="line">        --&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">     &lt;div v-text=&quot;name&quot;&gt;你好&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;!-- 
+
+    v-html是用来设置标签的html内容,会替换掉标签的原来html内容
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">        &lt;div v-html=&quot;name&quot;&gt;hello world&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- v-bind可以给一个标签绑定属性</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">v-bind:title=&quot;title+name&quot;   title的值是  : 姓名文本框&lt;p&gt;zhangsan&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">v-bind:title=&quot;title+&apos;name&apos;&quot;   title的值是 : 姓名文本框name</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;input name=&quot;name&quot;&gt;   这边的&quot;name&quot;就是字符串
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">    &lt;input v-bind:name=&quot;name&quot;&gt;  这边的&quot;name&quot;就是ViewModel实例模型层中的一个变量</span><br><span class="line"></span><br><span class="line">--&gt;</span><br><span class="line"></span><br><span class="line">&lt;input type=&quot;text&quot; name=&quot;name&quot; v-bind:title=&quot;title+name&quot; value=&quot;xx&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;input type=&quot;text&quot; name=&quot;name&quot; v-bind:title=&quot;title+&apos;name&apos;&quot; value=&quot;xx&quot;&gt;</span><br></pre></td></tr></table></figure>
+ <!--  默认情况下v-bind是可以省略的 -->
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; name=&quot;name&quot; :title=&quot;title+&apos;name3&apos;&quot; value=&quot;xx&quot;&gt;</span><br></pre></td></tr></table></figure>
+<!-- v-on 指定是用来给标签绑定事件的 -->
+<pre><code>&lt;input type=&quot;button&quot; value=&quot;点我&quot; v-on:click=&quot;modify&quot;&gt;
+
+&lt;!-- v-on 默认情况下可以省略 ，如果省略用@符号表示 --&gt;
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;button&quot; value=&quot;点我&quot; @click=&quot;modify&quot;&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>注意点： @click=&quot;alert(3)&quot; 会从ViewModel的methods中去找有没有对应的方法， 如果有则执行，如果没有则报错
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;button&quot; value=&quot;点我&quot; @click=&quot;alert(3)&quot;&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="事件修饰符"><a href="#事件修饰符" class="headerlink" title="事件修饰符"></a><strong>事件修饰符</strong></h2><!-- 使用  .stop  阻止冒泡 -->
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;inner&quot; @click=&quot;div1Handler&quot;&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;input type=&quot;button&quot; value=&quot;阻止冒泡&quot; @click.stop=&quot;btnHandler&quot;&gt;
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/06/21/5d0c2af51ec0969348.bmp" alt></p>
+<!-- 使用 .prevent 阻止默认行为 -->
+<pre><code>&lt;a href=&quot;http://www.baidu.com&quot; @click.prevent=&quot;linkClick&quot;&gt;阻止默认行为&lt;/a&gt; 
+</code></pre><p><img src="https://i.loli.net/2019/06/21/5d0c2af47003224121.bmp" alt></p>
+<!-- 使用  .capture 实现捕获触发事件的机制 。打印顺序从外向里 -->
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">       &lt;div class=&quot;inner&quot; @click.capture=&quot;div1Handler&quot;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">    &lt;input type=&quot;button&quot; value=&quot;捕获事件&quot; @click=&quot;btnHandler&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<!-- 使用 .self 实现只有点击当前元素时候，才会触发事件处理函数。对于孩子冒泡过来的事件不处理 -->
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">       &lt;div class=&quot;inner&quot; @click.self=&quot;div1Handler&quot;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">        &lt;div class=&quot;inner&quot; @click.self=&quot;div1Handler&quot;&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;input type=&quot;button&quot; value=&quot;self&quot; @click=&quot;btnHandler&quot;&gt;
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<!-- 使用 .once 只触发一次事件处理函数 -->
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span href=&quot;http://www.baidu.com&quot; @click.once=&quot;spanClick&quot;&gt;只能触发一次&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<!-- 演示： .stop 和 .self 的区别 -->
+<p>​        <!--.stop阻止所有的冒泡--></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">        &lt;div class=&quot;outer&quot; @click=&quot;div2Handler&quot;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">            &lt;div class=&quot;inner&quot; @click=&quot;div1Handler&quot;&gt;		&lt;div class=&quot;inner&quot; @click=&quot;div1Handler&quot;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;button&quot; value=&quot;stop&quot; @click.stop=&quot;btnHandler&quot;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+ <!-- .self 只有点击当前元素才会触发点击事件。如果子元素的事件冒泡到自己身上，不会执行该事件 -->
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">        &lt;div class=&quot;outer&quot; @click=&quot;div2Handler&quot;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">        &lt;div class=&quot;outer&quot; @click=&quot;div2Handler&quot;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">            &lt;div class=&quot;inner&quot; @click.self=&quot;div1Handler&quot;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">       &lt;input type=&quot;button&quot; value=&quot;self&quot; @click=&quot;btnHandler&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/06/21/5d0c2af8985c597378.bmp" alt></p>
+<p><img src="https://i.loli.net/2019/06/21/5d0c2af84d8a686602.bmp" alt></p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/huangqc123.github.io/2019/04/03/hello-world/" class="next-post btn btn-default" title="Hello World">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">Hello World</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/huangqc123.github.io/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: false,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: ''.toLowerCase()
+        })
+    </script>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">Table of Contents</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#VUE"><span class="toc-text">VUE</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#１-vue基本使用"><span class="toc-text">１. vue基本使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue的双向绑定"><span class="toc-text">Vue的双向绑定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插值表达式"><span class="toc-text">插值表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用指令"><span class="toc-text">常用指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件修饰符"><span class="toc-text">事件修饰符</span></a></li></ol></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2017
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/huangqc123.github.io/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>
